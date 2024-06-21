@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LazyWave App</title>
+  </head>
+  <body>
+    <div id="loading-indicator" style="display: none;">Loading...</div>
+    
+    <button data-load-click="ext1.js">Click to load module 1</button>
+    <button data-load-click="ext2.js">Click to load module 2</button>
+    <button data-load-dblclick="ext7.js">Double-click to load module 7</button>
+    
+    <div data-load-observe="ext1.js" style="margin-top: 1000px;">Scroll to load module 1</div>
+    <div data-load-observe="ext2.js" style="margin-top: 1500px;">Scroll to load module 2</div>
+    
+    <div data-load-hover="ext3.js">Hover to load module 3</div>
+    <div data-load-mouseenter="ext8.js">Mouse enter to load module 8</div>
+    <div data-load-mouseleave="ext9.js">Mouse leave to load module 9</div>
+    
+    <input type="text" data-load-focus="ext4.js" placeholder="Focus to load module 4">
+    <input type="text" data-load-change="ext10.js" placeholder="Change to load module 10">
+    
+    <div data-load-timeout="5000" data-load-timeout-module="ext5.js">Load module 5 after 5 seconds</div>
+    
+    <form data-load-submit="ext11.js">
+      <button type="submit">Submit to load module 11</button>
+    </form>
+    
+    <div data-load-resize="ext12.js">Resize to load module 12</div>
+    
+    <div data-load-scroll="ext13.js" style="height: 200px; overflow-y: scroll;">
+      <div style="height: 300px;">Scroll to load module 13</div>
+    </div>
+    
+    <input type="text" data-load-keydown="ext14.js" placeholder="Keydown to load module 14">
+    
+    <div data-load-custom-event="customEvent" data-load-custom-module="ext6.js">Trigger custom event to load module 6</div>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
